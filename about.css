@@ -1,0 +1,215 @@
+*{
+    font-family: "Montserrat", sans-serif;
+    padding:0rem;
+    padding-left: 0px;
+    margin-left:0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    scroll-behavior: smooth;
+    
+}
+.main{
+     height: 100vh; 
+    background-image:linear-gradient(to left,rgba(34, 34, 34, 0.1), rgba(0, 0, 0, 0.9)), url( backgound1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+     background-position: center ;
+     
+    
+    
+}
+.nav{
+    display:flex;
+    height:4rem;
+    width:100%;
+    ;
+    
+    /* background-color:  rgb( 6,50,91, 0.9) ;  */
+    align-items: center;
+     /* box-shadow: 3px 3px 3px #000000 ;   */
+}
+ 
+/* .logo{
+    border-bottom:  2px solid rgb(250, 249, 249);
+     border-radius: 10px; 
+} */
+.logo{
+    display: flex;
+     align-items:center;
+     margin-top: 2rem;
+     margin-left: 1rem;
+     
+}
+.option{
+    display: flex;
+    width: 100%;
+    justify-content:space-evenly ;
+    margin-top: 2rem;
+    margin-left: 40rem;
+    
+}
+.option a
+{
+    text-decoration:none;
+    color: white;
+}
+.option a:hover{
+    border-bottom: 0.10rem solid rgb(255, 255, 255);
+    border-radius: 0.20rem;
+}
+.def{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-size:larger;
+    color:white;
+    
+}
+ /* .desc h1 i{
+    color:#0a488a;
+}  */
+ 
+.desc h1{
+    /* text-align: center; */
+    color: rgba(255, 255, 255, 0.9) ;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 2%;
+    margin-bottom: 0px;
+    margin-left: 1rem;
+}
+ .desc p{
+     text-align:left;
+    color:#ffffff;
+     line-height: 1.2rem; 
+      /* font-size:large;  */
+      font-weight: 200; 
+     margin-top:0.4rem;
+     margin-left: 1rem;
+      
+}
+.frame{
+    height:150px;
+    width:150px;    
+}
+ 
+.frame img{
+    border-radius: 50%;
+     box-shadow: 4px 5px 15px  rgba(47, 47, 48, 0.7);
+}
+ 
+.social{
+    font-weight: 700;
+     text-align: center;
+
+
+}
+.social i{
+    margin-left: 0.5rem;
+    color:rgb(254, 254, 254)
+}
+.desc{
+     margin-left:1rem; 
+    margin-right: 0.1rem;
+     margin-bottom: 8rem;  
+     /* background-color: rgb(246, 246, 246);   */
+    margin-top:24rem;
+    /* padding-top: 20rem; */
+     padding-bottom: 1rem; 
+     /* box-shadow: 1px 1px 2px  rgba(75, 73, 73, 0.8) ;  */
+    
+}
+.purpose{
+    text-align: center;
+     
+    font-weight: 700;
+     margin-top: 28vh; 
+}
+.pur_def1:hover{
+    scale:105%;
+    cursor:pointer;
+     box-shadow: 0px 3px 4px  rgb(0, 0, 0); 
+    
+}
+
+     
+ 
+.purpose i{
+    color:rgb(60, 153, 240) ;
+    margin-bottom: 3rem;
+}
+.pur_def{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 4rem;
+}
+ .pur_def1
+ {
+    /* background-color: #0a488a; */
+    height:13rem;
+    width:20rem;
+    border:1px solid grey;
+    border-radius: 1rem;
+    background-color:rgb(246, 246, 246); 
+    box-shadow: 1px 2px  4px  rgb(0, 0, 0);
+ }
+ .icon h3{
+    text-align: center;
+    margin-bottom: 2.5rem;
+    
+ }
+.icon  i{
+    margin-right:0.5rem;
+    color: rgb(60, 153, 240) ;
+     
+}
+.pur_para{
+    margin-left: 1rem;
+    color:rgb(0, 58, 85)
+}
+  
+ 
+.photo{
+     background-color:#172337; 
+     font-size: 13.5px; 
+    padding-top: 3rem;
+    padding-bottom: 1rem; 
+    margin-top: 8.5rem; 
+    
+    display:flex;
+    justify-content:center;
+    justify-content: space-evenly;
+    /* background-color:rgb(12, 58, 90)  ; */
+
+}
+ 
+.info h4 ,p{
+    margin-top: 1rem;
+    text-align:center;
+    line-height: 0.1rem;
+    color: rgb(255, 255, 255);
+}
+.social {
+      height:3rem;
+}
+.contact{
+     
+    display: flex;
+    height:3rem;
+    justify-content: space-between;
+    align-items: center;
+    /* box-shadow: 1px 1px  2px  rgb(0, 0, 0); */
+    font-weight:13.5px; 
+    font-size: 13.5px;
+    color: #ffffff;
+    border-top:1px solid  #737b8c;
+    background-color:#172337;
+    /* background-color:rgb(255, 255, 255,0.4); */
+}
+/* .contact .num .email{
+    color: white;
+} */
+.contact i{
+    color: rgb(255, 255, 255);
+}
+ 
+ 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Function execution</h1>
+        <p>A function may accept one or many parameters, but must return a single value. You invoke functions as part of PL/SQL expressions, using variables to hold the returned value.</p>
+       <span>EXAMPLE</span>
+        <BR></BR>
+        <div class="example">
+            
+            <PRE class="ex">
+    CREATE OR REPLACE FUNCTION F1(X NUMBER, Y NUMBER) 
+    RETURN NUMBER IS
+    NUM NUMBER;
+    BEGIN
+    NUM:=X+Y;
+    RETURN (NUM);
+    END F1;
+    To call the above mentioned function:
+    DECLARE 
+    NUM1 NUMBER:=10;
+    NUM2 NUMBER:=40;
+    BEGIN 
+    DBMS_OUTPUT.PUT_LINE(F1(NUM1,NUM2));
+    END;
+    <br>
+    OUTPUT:50
+    </PRE></div>  
+       </div> 
+</body>
+</html>

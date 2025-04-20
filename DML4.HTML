@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>DELETE COMMAND</h1>
+        <p>The<span> DELETE </span>statement is used to delete rows from a table. To delete rows from a table, the table must be in your own schema or you must have the delete privilige on the table.</p>
+        <br>
+        <p><span>SYNTAX</span>:
+         <pre>
+    DELETE FROM table_name;
+    [WHERE CONDITION];
+            </pre></p>
+    Specified rows are deleted if you specify the WHERE clause in the DELETE statement. If you omit the WHERE clause, then all rows in the table are deleted.
+    <BR></BR>
+        <span>EXAMPLE</span>
+        <br>
+        <br>
+        
+        <div class="example">
+           
+         1.  Delete all records from table 'EMPLOYEE':
+           <br>
+           <pre class="ex">
+    DELETE from EMPLOYEE;
+           </pre>
+          
+        2.   Delete all records of sales department from EMPLOYEE table;
+           <pre class="ex">
+    DELETE from EMPLOYEE where dept='SALES';
+           </pre>
+        </div>
+       
+       </div> 
+</body>
+</html>

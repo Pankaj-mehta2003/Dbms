@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>UPDATE COMMAND</h1>
+        <p>The <span>UPDATE</span> statement is used to update oor modify the exiting rows in a table. Updation can be carried out for all the rows in a table or selected rows. The update statement modifies specific rows if the WHERE clause is specified. If you omit the WHERE clause, then all the rows in the table are modified.</p>
+        <p><span>SYNTAX</span>:
+        
+            <pre>
+    UPDATE table_name SET column_name=val1,column_name2=val2.....
+    [where condition];
+            </pre></p>
+        <span>EXAMPLE</span>
+        <br>
+        <br>
+        
+        <div class="example">
+    Consider a table 'EMPLOYEE' with following values:
+    <BR></BR>
+    <table class="table" BORDER="2REM">
+        <tr>
+            <th>EMP_ID</th>
+            <th>NAME</th>
+            <th>SALARY</th>
+            <th>DEPT</th>
+    
+            
+        </tr>
+        <TR>
+            <TD>1</TD>
+            <TD>MONA</TD>
+            <TD>200000</TD>
+            <TD>HR</TD>
+            
+        </TR>
+        <TR>
+            <TD>2</TD>
+            <TD>SONA</TD>
+            <TD>100000</TD>
+            <TD>SALES</TD>
+            
+        </TR>
+        <TR>
+            <TD>3</TD>
+            <TD>NAINA</TD>
+            <TD>50000</TD>
+            <TD>SALES</TD>
+            
+        </TR>
+        <TR>
+            <TD>4</TD>
+            <TD>NAMAN</TD>
+            <TD>150000</TD>
+            <TD>PRODUCTION</TD>
+            
+        </TR>
+        </table> 
+        <BR></BR>
+    TO UPDATE SALARY OF EMPLOYEES TO 150000 OF EMPLOYEE WHOSE DEPARTMENT IS 'SALES':
+           <pre class="ex">
+    UPDATE EMPLOYEE SET SALARY=150000 WHERE dept='SALES';
+           </pre>
+           select * from EMPLOYEE;
+           <BR></BR>
+           <table class="table" BORDER="2REM">
+            <tr>
+                <th>EMP_ID</th>
+                <th>NAME</th>
+                <th>SALARY</th>
+                <th>DEPT</th>
+        
+                
+            </tr>
+            <TR>
+                <TD>1</TD>
+                <TD>MONA</TD>
+                <TD>200000</TD>
+                <TD>HR</TD>
+                
+            </TR>
+            <TR>
+                <TD>2</TD>
+                <TD>SONA</TD>
+                <TD>150000</TD>
+                <TD>SALES</TD>
+                
+            </TR>
+            <TR>
+                <TD>3</TD>
+                <TD>NAINA</TD>
+                <TD>150000</TD>
+                <TD>SALES</TD>
+                
+            </TR>
+            <TR>
+                <TD>4</TD>
+                <TD>NAMAN</TD>
+                <TD>150000</TD>
+                <TD>PRODUCTION</TD>
+                
+            </TR>
+            </table>  
+        </div>
+       
+       </div> 
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>REVOKE COMMAND</h1>
+        <p><span>REVOKE</span> command removes user access rights or priviliges to the database objects. You can remove priviliges granted to other users by using the REVOKE statement. When you use the REVOKE statement, the priviliges that you specify are revoked from the users name and from any other users to whom those priviliges were granted through the WITH GRANT OPTION clause</p>
+        <br>
+        <p><span>SYNTAX</span>:
+        
+            <pre>
+    REVOKE [type_of_priviliges] ON [user_name].[table name] FROM [user_name]
+            </pre></p>
+        <span>EXAMPLE</span>
+        <br>
+        <br>
+        
+        <div class="example">
+           
+    This command revokes the INSERT permission on the database 'mydb' from 'user1'.
+            
+           <pre class="ex">
+    REVOKE INSERT ON mydb FROM 'user1'@'localhost';
+            
+           </pre>
+        </div>
+       
+       </div> 
+</body>
+</html>

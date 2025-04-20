@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>CONDITIONAL CONTROL</h1>
+        <p>The structure of the <span>PL/SQL</span> IF statement is similar to the structure of the IF statements in other procedural languages. There are three forms of IF statements:
+        <br>
+        </p>
+        <br><H2>1.IF-THEN-END-IF</H2>
+        <p><span>SYNTAX</span>:
+            <br>
+            <pre>
+    IF condition THEN
+          statements;
+    END IF;            
+            </pre></p>
+        <span>EXAMPLE</span>
+        <div></div>
+        <BR></BR>
+        <div class="example">
+            
+            <PRE class="ex">
+    DECLARE
+    X NUMBER(2);
+    BEGIN
+    X:=5;
+    IF X>0 THEN
+    DBMS_OUTPUT.PUT_LINE('POSITIVE NUMBER');
+    END IF;
+    END;
+                <BR></BR>
+    OUTPUT:
+    POSITIVE NUMBER
+            </PRE></div>
+            <br><H2>2.IF-THEN-ELSE-END IF</H2>
+            <p><span>SYNTAX</span>:
+                <br>
+                <pre>
+    IF condition THEN
+              statements;
+    ELSE 
+              statements;
+    END IF;            
+                </pre></p>
+            <span>EXAMPLE</span>
+            <div></div>
+            <BR></BR>
+            <div class="example">
+                
+                <PRE class="ex">
+    DECLARE
+    X NUMBER(2);
+    BEGIN
+    X:=-25;
+    IF X>0 THEN
+    DBMS_OUTPUT.PUT_LINE('POSITIVE NUMBER');
+    ELSE
+    DBMS_OUTPUT.PUT_LINE('NEGATIVE NUMBER');   
+    END IF;
+    END;
+                    <BR></BR>
+    OUTPUT:
+    NEGATIVE NUMBER
+                </PRE></div>  
+                <br><H2>3..IF-THEN--ELSIF-END IF</H2>
+                <p><span>SYNTAX</span>:
+                    <br>
+                    <pre>
+        IF condition THEN
+                  statements;
+        ELSIF condition THEN 
+                  statements;
+        [ELSE 
+                  statements;]
+        END IF;            
+                    </pre></p>
+                <span>EXAMPLE</span>
+                <div></div>
+                <BR></BR>
+                <div class="example">
+                    
+                    <PRE class="ex">
+    DECLARE
+    X NUMBER(2);
+    BEGIN
+    X:=0;
+    IF X>0 THEN
+    DBMS_OUTPUT.PUT_LINE('POSITIVE NUMBER');
+    ELSIF X=0 THEN
+    DBMS_OUTPUT.PUT_LINE('ZERO'); 
+    ELSE
+    DBMS_OUTPUT.PUT_LINE('NEGATIVE NUMBER');     
+    END IF;
+    END;
+                        <BR></BR>
+    OUTPUT:
+    ZERO
+                    </PRE></div>  
+       </div> 
+</body>
+</html>

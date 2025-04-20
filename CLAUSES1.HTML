@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>WHERE CLAUSE</h1>
+        <p>The <SPAN>WHERE</SPAN> clause is used to filter records.
+    It is used to extract only those records that fulfill a specified condition.
+    <p><span>SYNTAX</span>:
+        
+        <pre>
+    SELECT COLUMN_LIST FROM table_name WHERE CONDITION;
+        </pre> 
+            </p>
+        <span>EXAMPLE</span>
+        <br>
+        <br>
+        
+        <div class="example">
+    Consider a table 'EMPLOYEE' with following values:
+    <BR></BR>
+    <table class="table" BORDER="2PX">
+        <tr>
+            <th>EMP_ID</th>
+            <th>NAME</th>
+            <th>SALARY</th>
+            <th>DEPT</th>
+    
+            
+        </tr>
+        <TR>
+            <TD>1</TD>
+            <TD>MONA</TD>
+            <TD>200000</TD>
+            <TD>HR</TD>
+            
+        </TR>
+        <TR>
+            <TD>2</TD>
+            <TD>SONA</TD>
+            <TD>100000</TD>
+            <TD>SALES</TD>
+            
+        </TR>
+        <TR>
+            <TD>3</TD>
+            <TD>NAINA</TD>
+            <TD>50000</TD>
+            <TD>SALES</TD>
+            
+        </TR>
+        <TR>
+            <TD>4</TD>
+            <TD>NAMAN</TD>
+            <TD>150000</TD>
+            <TD>PRODUCTION</TD>
+            
+        </TR>
+        </table> 
+        <BR></BR>
+    TO EXTRACT NAME OF ALL EMPLOYEES BELONGING TO 'SALES' DEPARTMENT:
+           <pre class="ex">
+    SELECT NAME FROM EMPLOYEE WHERE DEPT='SALES' ;      </pre>
+           <BR></BR>
+           <table class="table" BORDER="2PX">
+            <tr>
+                
+                <th>NAME</th>
+               
+                
+            </tr>
+            <TR>
+               
+                <TD>SONA</TD>
+               
+                
+            </TR>
+            <TR>
+               
+                <TD>NAINA</TD>
+                
+            </TR>
+           
+          
+            </table>  
+        </div>
+        <BR></BR>
+        The WHERE clause is not only used in SELECT statements, it is also used in UPDATE, DELETE, etc.
+       </div> 
+</body>
+</html>

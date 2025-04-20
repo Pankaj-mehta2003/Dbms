@@ -1,0 +1,30 @@
+*{
+     padding-left: 0rem;
+     font-family: "Montserrat", sans-serif;
+     color: rgb( 6,50,91, 0.9) ;
+    
+      
+     
+      
+}
+ 
+.menu li{
+    border:1.5px solid rgb(220, 216, 216); 
+     
+    margin-bottom: 1.5rem;
+    padding-left:0.3rem;
+    box-shadow: 1px 2px  4px  rgb( 6,50,91);
+    border-radius:0.1rem;
+    border-left: 4px solid   rgb( 6,50,91, 0.9) ; 
+     background-color: rgba(255, 255, 255); 
+    border-bottom: 4px solid  rgba(255, 255, 255, 0.4);
+    border-top: 4px solid  rgba(255, 255, 255, 0.4);  
+}  
+.menu a{
+     text-decoration: none;
+}
+.menu li:hover{
+     /* box-shadow: 1px 2px  4px  rgb( 6,50,91);  */
+     scale:101% ; 
+      
+}

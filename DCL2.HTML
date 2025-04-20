@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>GRANT COMMAND</h1>
+        <p><span>GRANT</span> command is used to provide system priviliges as well as object priviliges to user.</p>
+        <br>
+        <p><span>SYNTAX</span>:
+        
+            <pre>
+    GRANT [type_of_priviliges] ON [user_name].[table name] TO [user_name]
+    [WITH GRANT OPTION];
+    In the syntax:
+    WITH GRANT OPTION - allows a user to grant access rights to other users.
+            </pre></p>
+        <span>EXAMPLE</span>
+        <br>
+        <br>
+        
+        <div class="example">
+           
+          
+           This command grants the SELECT, INSERT, and DELETE permissions on the database 'mydb' to 'user1'.
+           <pre class="ex">
+    GRANT SELECT, INSERT, DELETE ON mydb TO 'user1'@'localhost';
+            
+            
+           </pre>
+        </div>
+       
+       </div> 
+</body>
+</html>

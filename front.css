@@ -1,0 +1,169 @@
+
+*{
+    MARGIN:0;
+    padding:0;
+    font-family: "Montserrat", sans-serif;
+}
+.main  {
+    background-image:linear-gradient(to left,rgba(34, 34, 34, 0.4), rgba(0, 0, 0, 0.8)), url( front.jpg);
+    height:100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+     background-position: center;
+    
+ 
+
+}
+.btn1 i {
+    position:absolute;
+    font-size: 30px;
+    font-weight: 700;
+    left:20px;
+    line-height: 30px;
+    color:white;
+    top:20px;
+    cursor: pointer;
+    
+}
+.sidebar{
+    position:fixed;
+    /* background-color: #121212 ; */
+    height:95vh;
+    width:300px;
+    background-color:rgba(0, 0, 0, 0.2)  ;
+      
+   box-shadow: 1px 1px 4px rgb(68 87 105)  ; 
+   left:-330px; 
+   transition:all 0.4s linear;
+}
+.sidebar .logo
+{
+    position:absolute; 
+     
+    
+    line-height: 30px;
+    left:21%;
+    top:20px;
+}
+.logo{
+    display: flex;
+     align-items:center;
+     
+}
+.def{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-size:larger;
+    color:white;
+    
+}
+.sidebar  .btn2 i {
+    position:absolute;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    left:90%;
+    color:white;
+    top:20px;
+    cursor: pointer;
+    opacity:0.5;
+}
+
+.sidebar .menu{
+    position:absolute;
+    width:100%;
+    top:80px;
+    
+    
+
+}
+.sidebar .menu li   {
+    font-size: 20px;
+    color: #e7e9ed;
+    padding:10px 20px;
+    margin-top: 10px;
+    font-weight: 700;
+     
+   
+}
+.sidebar .menu   i{
+    padding-right: 9px;
+}
+ 
+.sidebar  .social{
+    position:absolute;
+    color:white;
+    left:25%;
+    bottom:10%;
+    
+
+}
+.sidebar .social i{
+    font-size: 21px;
+    font-weight:4rem;
+    color:white;
+    padding-right:20px;
+   
+    
+}
+#check{
+    display:none;
+}
+.sidebar .menu li:hover{
+    box-shadow: 0 0 4px  #8AAAE5;  
+     
+
+}
+.btn1 i :hover{
+    font-size: 40px;
+}
+.btn2 i:hover{
+    font-size:  32px;
+}
+.sidebar .social i:hover{
+    
+    transform:scale(1.1);
+}
+#check:checked ~ .sidebar{
+    left:0;
+}
+ #check:checked ~ .btn1 i{
+    opacity:0;
+ }
+ .line{
+    position:absolute;
+    left:24%;
+    bottom:50%;
+ }
+ .fst i {
+    color:white;
+    display: inline;
+     font-size: 40px;
+     
+ }
+.fst  h1{
+    color: #f6f7f8;
+    font-weight:800;
+     font-size:40px;
+     padding-bottom: 9PX;
+     /* line-height: 40px; */
+     display: inline-block;
+     
+
+
+} 
+.scnd p{
+    color:white;
+    font-size:16PX ;
+    font-weight: 500;
+    /* padding-left:1px */
+    
+}
+  .menu li a {
+    text-decoration: none;
+    color:white;
+}
+ 
+  
+  
+ 

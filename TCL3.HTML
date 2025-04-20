@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>ROLLBACK </h1>
+    
+        <p>The ROLLBACK command in SQL is used to undo or cancel the changes made by transactions that have not yet been committed to the database. It reverts the database back to the state it was in before the transaction began.
+        </p>
+        <p><span><p>Example:</p></span></p>
+        <div class="example">
+            <pre><code>Step 1: SELECT * FROM DEPT;</code></pre>
+            <table BORDER="2REM">
+                <tr>
+                    <th>DEPTNO</th>
+                    <th>DNAME</th>
+                    <th>LOC</th>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>ACCOUNTING</td>
+                    <td>NEW YORK</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>RESEARCH</td>
+                    <td>DALLAS</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>SALES</td>
+                    <td>CHICAGO</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>OPERATIONS</td>
+                    <td>BOSTON</td>
+                </tr>
+            </table>
+            
+            <pre><code>Step 2: INSERT INTO DEPT VALUES (50, 'FINANCE', 'MUMBAI');</code></pre>
+            <p>1 row created.</p>
+            <pre><code>Step 3: SELECT * FROM DEPT;</code></pre>
+            <table BORDER="2REM">
+                <tr>
+                    <th>DEPTNO</th>
+                    <th>DNAME</th>
+                    <th>LOC</th>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>ACCOUNTING</td>
+                    <td>NEW YORK</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>RESEARCH</td>
+                    <td>DALLAS</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>SALES</td>
+                    <td>CHICAGO</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>OPERATIONS</td>
+                    <td>BOSTON</td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>FINANCE</td>
+                    <td>MUMBAI</td>
+                </tr>
+            </table>
+            
+            NOW YOU DECIDE TO ROLLBACK THE CHANGES.
+            <br>
+            <pre><code>Step 4: ROLLBACK;</code></pre>
+            <p>Rollback complete.</p>
+            <pre>After rolling back the table will revert to its original state.</pre>
+            <table BORDER="2REM">
+                <tr>
+                    <th>DEPTNO</th>
+                    <th>DNAME</th>
+                    <th>LOC</th>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>ACCOUNTING</td>
+                    <td>NEW YORK</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>RESEARCH</td>
+                    <td>DALLAS</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>SALES</td>
+                    <td>CHICAGO</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>OPERATIONS</td>
+                    <td>BOSTON</td>
+                </tr>
+               
+            </table>
+            
+            <p>
+            </p></div> 
+       </div> 
+</body>
+</html>

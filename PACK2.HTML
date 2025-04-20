@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Creating a PACKAGE</h1>
+        <p>To create a package or package specification, use the CREATE PACKAGE statement, which you can execute interactively.</p>
+        <p> <span>SYNTAX</span></p>
+      <pre>
+    CREATE OR REPLACE PACKAGE &lt;package_name> IS/AS
+            FUNCTION &lt;function_name> (&lt;list of arguments>) 
+            RETURN &lt;datatype>;
+            PROCEDURE &lt;procedure_name> (&lt;list of arguments>);
+            -- code statements
+        END &lt;package_name>;
+      </pre>
+    <br>
+    <p>To create a package body, use the CREATE PACKAGE BODY statement, which you can execute interactively.</p>
+    <p> <span>SYNTAX</span></p>
+    <pre>
+        CREATE  OR REPLACE PACKAGE BODY &LT;package_name> IS/AS
+            FUNCTION &LT;function_name> (&LT;list of arguments>) RETURN &LT;datatype>IS/AS
+                -- local variable declaration;
+                BEGIN
+                    -- executable  statements;
+                EXCEPTION
+                    -- error handling statements;
+            END &LT;function_name>;
+            
+            PROCEDURE &LT;procedure_name> (&LT;list of arguments>)IS/AS
+                -- local variable declaration;
+                BEGIN
+                    -- executable statements;
+                EXCEPTION
+                    -- error handling statements;
+                END &LT;procedure_name>;
+            END &LT;package_name>;
+    </pre>
+    <br>
+    <p><span>EXAMPLE:</span></p>
+        <div class="example">
+            
+            <PRE class="ex">
+    CREATE PACKAGE cust_sal AS 
+    PROCEDURE find_sal(c_id customers.id%type); 
+    END cust_sal;
+    <BR></BR>
+    CREATE OR REPLACE PACKAGE BODY cust_sal AS  
+    PROCEDURE find_sal(c_id customers.id%TYPE) IS 
+    c_sal customers.salary%TYPE; 
+    BEGIN 
+    SELECT salary INTO c_sal 
+    FROM customers 
+    WHERE id = c_id; 
+    dbms_output.put_line('Salary: '|| c_sal); 
+    END find_sal; 
+    END cust_sal;  
+    </PRE></div> 
+    To execute the package
+    <br>
+    <pre>
+    DECLARE 
+    code customers.id%type := &cc_id; 
+    BEGIN 
+    ust_sal.find_sal(code); 
+    END; 
+    </pre> 
+       </div>  
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>EQUI JOIN</h1>
+        <P>When two tables are joined together using equality of values in one or more columes they make an Equi join. Table prefixes are utilized to prevent ambiguity and the WHERE clause specifies the columns being joined. It is a simple SQL join condition which uses the equal sign as the comparison operator.
+        </P>
+        </p>
+       <p><span>EXAMPLE:</span></p> 
+        
+        
+        
+        <DIV class="example">
+            Consider the following tables:
+            <P><SPAN>table:EMP</SPAN></P>
+        <table class="table" BORDER="2PX">
+            <tr>
+                <th>EMPNO</th>
+                <th>ENAME</th>
+                <th>JOB</th>
+                <TH>DEPT NO.</TH>
+                
+            </tr>
+            <TR>
+                <TD>7369</TD>
+                <TD>SMITH</TD>
+                <TD>CLERK</TD>
+                <TD>20</TD>
+            </TR>
+            <TR>
+                <TD>7499</TD>
+                <TD>ALLEN</TD>
+                <TD>SALESMAN</TD>
+                <TD>30</TD>
+                
+            </TR>
+            <TR>
+                <TD>7521</TD>
+                <TD>WARD</TD>
+                <TD>SALESMAN</TD>
+                <TD>30</TD>
+                
+            </TR>
+            <TR>
+                <TD>7566</TD>
+                <TD>JONES</TD>
+                <TD>MANAGER</TD>
+                <TD>20</TD>
+                
+            </TR>
+            </table>
+            <P><SPAN>table:DEPT</SPAN></P>
+        <table class="table" BORDER="2PX">
+            <tr>
+                <th>DEPTNO</th>
+                <th>DNAME</th>
+                <th>LOC</th>
+                
+            </tr>
+            <TR>
+                <TD>10</TD>
+                <TD>ACCOUNTING</TD>
+                <TD>NEW YORK</TD>
+            </TR>
+            <TR>
+                <TD>20</TD>
+                <TD>RESARCH</TD>
+                <TD>DALLAS</TD>
+                
+            </TR>
+            <TR>
+                <TD>30</TD>
+                <TD>SALES</TD>
+                <TD>CHICAGO</TD>
+           
+                
+            </TR>
+            <TR>
+                <TD>40</TD>
+                <TD>OPERATIONS</TD>
+                <TD>BOSTON</TD>
+                
+            </TR>
+            </table>
+        <br>
+       To list the employee numbers,names, department numbers and the department name, the query would be like:
+            
+        <PRE class="ex">
+    SELECT EMPNO, ENAME,EMP.DEPTNO, DNAME FROM EMP, DEPT WHERE EMP.DEPTNO = DEPT.DEPTNO;
+            </PRE>
+            OUTPUT:
+            <table BORDER="2PX">
+                <tr>
+                    <th>EMPNO</th>
+                    <th>ENAME</th>
+                    <th>DEPTNO</th>
+                    <th>DNAME</th>
+                </tr>
+                <tr>
+                    <td>7369</td>
+                    <td>SMITH</td>
+                    <td>20</td>
+                    <td>RESEARCH</td>
+                </tr>
+                <tr>
+                    <td>7499</td>
+                    <td>ALLEN</td>
+                    <td>30</td>
+                    <td>SALES</td>
+                </tr>
+                <tr>
+                    <td>7521</td>
+                    <td>WARD</td>
+                    <td>30</td>
+                    <td>SALES</td>
+                </tr>
+                <tr>
+                    <td>7566</td>
+                    <td>JONES</td>
+                    <td>20</td>
+                    <td>RESEARCH</td>
+                </tr>
+            </table>
+    
+        </div>
+        
+       </div> 
+</body>
+</html>

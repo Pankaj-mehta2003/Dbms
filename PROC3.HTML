@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Calling a procedure</h1>
+        <p>A procedure is called as a PL/SQL statement A procedure can be called from any PL/SQL program by giving its names followed by the parameters. To call a procedure in PL/SQL, you can use the EXECUTE or CALL statement followed by the name of the procedure and any required parameters.</p>
+        
+       <span>EXAMPLE</span>
+        <BR></BR>
+        <div class="example">
+            
+            <PRE class="ex">
+    CREATE OR REPLACE PROCEDURE P1(X NUMBER, Y NUMBER) IS
+    NUM NUMBER;
+    BEGIN
+    NUM:=X+Y;
+    DBMS_OUTPUT.PUT_LINE(NUM);
+    END P1;
+    To call the above mentioned procedure there are two ways:
+    BEGIN
+    P1(90,100);
+    END;
+    <SPan>OR</SPan>
+    EXECUTE P1(90,100);
+    <br>
+    OUTPUT:190
+    </PRE></div>  
+       </div> 
+</body>
+</html>

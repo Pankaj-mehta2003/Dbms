@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>%TYPE</h1>
+        <P><SPAN>%TYPE </SPAN>is used to declare variables whose data type is the same as a specific column in a table or cursor variable. It is particularly useful when you want to ensure that the data type of a variable matches the data type of a column, reducing the risk of data type mismatch errors.</P>
+            </p>
+        <span>EXAMPLE</span>
+        <br>
+        <br>
+        
+        <div class="example">
+           <pre class="ex">
+    NAME EMP.ENAME%TYPE;   </pre>
+    Here, the variable Name will be of the same size and type as that of the ENAME column of the EMP table.
+    
+        </div>
+        <BR></BR>
+        <h1>%ROWTYPE</h1>
+        <P><SPAN>%ROWTYPE </SPAN>is used to declare record variables whose structure matches the structure of a row in a table or a result set of a query. It is particularly useful when you want to work with entire rows of data without specifying individual column names.</P>
+            </p>
+        <span>EXAMPLE</span>
+        <br>
+        <br>
+        
+        <div class="example">
+           <pre class="ex">
+    ROW EMP%ROWTYPE;   </pre>
+    Here, thw variable ROW will be a composte variable, consisting of the column names of the table as its members. To refer to a specific variable(say SAL), the following syntax will be used: <br>
+    ROW.SAL:=50000;
+    
+        </div>
+        <BR></BR>
+       </div> 
+</body>
+</html>

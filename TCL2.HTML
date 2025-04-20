@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>COMMIT </h1>
+    
+        <p>The COMMIT statement is used to make changes (inserts, updates, deletes) permanent in the database. On the other hand, the ROLLBACK statement is used to discard parts or all of the work the user has done in the current transaction, which is important in case an error is detected during DML operations.
+        </p>
+        <p><span><p>Example:</p></span></p>
+        <div class="example">
+            <pre><code>Step 1: SELECT * FROM DEPT;</code></pre>
+            <table BORDER="2REM">
+                <tr>
+                    <th>DEPTNO</th>
+                    <th>DNAME</th>
+                    <th>LOC</th>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>ACCOUNTING</td>
+                    <td>NEW YORK</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>RESEARCH</td>
+                    <td>DALLAS</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>SALES</td>
+                    <td>CHICAGO</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>OPERATIONS</td>
+                    <td>BOSTON</td>
+                </tr>
+            </table>
+            
+            <pre><code>Step 2: INSERT INTO DEPT VALUES (50, 'FINANCE', 'MUMBAI');</code></pre>
+            <p>1 row created.</p>
+            <pre><code>Step 3: SELECT * FROM DEPT;</code></pre>
+            <table BORDER="2REM">
+                <tr>
+                    <th>DEPTNO</th>
+                    <th>DNAME</th>
+                    <th>LOC</th>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>ACCOUNTING</td>
+                    <td>NEW YORK</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>RESEARCH</td>
+                    <td>DALLAS</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>SALES</td>
+                    <td>CHICAGO</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>OPERATIONS</td>
+                    <td>BOSTON</td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>FINANCE</td>
+                    <td>MUMBAI</td>
+                </tr>
+            </table>
+            
+            
+            <pre><code>Step 4: COMMIT;</code></pre>
+            <p>Commit complete.</p>
+            <pre><code>Step 5: SELECT * FROM DEPT;</code></pre>
+            <table BORDER="2REM">
+                <tr>
+                    <th>DEPTNO</th>
+                    <th>DNAME</th>
+                    <th>LOC</th>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>ACCOUNTING</td>
+                    <td>NEW YORK</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>RESEARCH</td>
+                    <td>DALLAS</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>SALES</td>
+                    <td>CHICAGO</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>OPERATIONS</td>
+                    <td>BOSTON</td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>FINANCE</td>
+                    <td>MUMBAI</td>
+                </tr>
+            </table>
+            
+            <p>In this example, we first select data from the DEPT table, then insert a new row, and finally commit the transaction to make the changes permanent in the database.
+            
+            </p></div> 
+       </div> 
+</body>
+</html>

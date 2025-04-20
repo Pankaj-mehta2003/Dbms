@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>CASE EXPRESSIONS</h1>
+        <P>Like the IF statement, the <span>CASE statement</span> selects one sequence of statements to execute. However, to select the sequence, the CASE statement uses a selector rather than multiple Boolean expressions. A selector is an expression, the value of which is used to select one of several alternatives.</P>
+        
+        </p>
+        
+        <p><span>SYNTAX</span>:
+            <br>
+            <pre>
+    CASE selector 
+    WHEN 'value1' THEN S1; 
+    WHEN 'value2' THEN S2; 
+    WHEN 'value3' THEN S3; 
+     ... 
+    ELSE Sn;  -- default case 
+    END CASE;          
+            </pre></p>
+        <span>EXAMPLE</span>
+        <div></div>
+        <BR></BR>
+        <div class="example">
+            
+            <PRE class="ex">
+    DECLARE 
+    num NUMBER(1) := 4; 
+    BEGIN 
+    CASE num 
+        when 1 then dbms_output.put_line('ONE'); 
+        when 2 then dbms_output.put_line('TWO'); 
+        when 3 then dbms_output.put_line('THREE'); 
+        when 4 then dbms_output.put_line('FOUR'); 
+        when 5 then dbms_output.put_line('FIVE'); 
+        else dbms_output.put_line('GREATER THAN FIVE'); 
+    END CASE; 
+    END; 
+                <BR></BR>
+    OUTPUT:
+    FOUR
+    </PRE></div>  
+       </div> 
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>OUTER JOIN</h1>
+      <P>This SQL join condition returns all rows from both tables which satisfy the join condition along with rows which do not satisfy the join condition from one of the tables.
+        <br>
+    
+        The Outer join is mainly preferred in such cases, if there are any values in one table that do not have corresponding values in the other. Such rows can be forcefully selected by using the Outer join symbol (+). It is used on one side of the join condition only.The corresponding columns for that row will have NULLS</P>
+       <p><span>EXAMPLE:</span></p> 
+       <DIV class="example">
+            Consider the following tables:
+            <P><SPAN>table:EMP</SPAN></P>
+        <table class="table" BORDER="2PX">
+            <tr>
+                <th>EMPNO</th>
+                <th>ENAME</th>
+                <th>JOB</th>
+                <TH>DEPT NO.</TH>
+                
+            </tr>
+            <TR>
+                <TD>7369</TD>
+                <TD>SMITH</TD>
+                <TD>CLERK</TD>
+                <TD>20</TD>
+            </TR>
+            <TR>
+                <TD>7499</TD>
+                <TD>ALLEN</TD>
+                <TD>SALESMAN</TD>
+                <TD>30</TD>
+                
+            </TR>
+            <TR>
+                <TD>7521</TD>
+                <TD>WARD</TD>
+                <TD>SALESMAN</TD>
+                <TD>30</TD>
+                
+            </TR>
+            <TR>
+                <TD>7566</TD>
+                <TD>JONES</TD>
+                <TD>MANAGER</TD>
+                <TD>20</TD>
+                
+            </TR>
+            </table>
+            <P><SPAN>table:DEPT</SPAN></P>
+        <table class="table" BORDER="2PX">
+            <tr>
+                <th>DEPTNO</th>
+                <th>DNAME</th>
+                <th>LOC</th>
+                
+            </tr>
+            <TR>
+                <TD>10</TD>
+                <TD>ACCOUNTING</TD>
+                <TD>NEW YORK</TD>
+            </TR>
+            <TR>
+                <TD>20</TD>
+                <TD>RESARCH</TD>
+                <TD>DALLAS</TD>
+                
+            </TR>
+            <TR>
+                <TD>30</TD>
+                <TD>SALES</TD>
+                <TD>CHICAGO</TD>
+           
+                
+            </TR>
+            <TR>
+                <TD>40</TD>
+                <TD>OPERATIONS</TD>
+                <TD>BOSTON</TD>
+                
+            </TR>
+            </table>
+        <br>
+        In the EMP table, no record of the employees belonging to the department 40 is present. Therefore, in the example above for Equi join, the row of department 40 from the DE table will not be displayed.
+        <br>
+    
+    To display the list of employees working in each department along with their department information even if no employee belongs to that department the query be like: <br>
+            
+        <PRE class="ex">
+    SELECT EMPNO, ENAME,EMP.DEPTNO, DNAME, LOC FROM EMP, DEPT WHERE EMP.DEPTNO(+) = DEPT.DEPTNO;
+            </PRE>
+            OUTPUT:
+            <table BORDER="2PX">
+                <tr>
+                    <th>EMPNO</th>
+                    <th>ENAME</th>
+                    <th>DEPTNO</th>
+                    <th>DNAME</th>
+                    <TH>LOC</TH>
+                </tr>
+                <tr>
+                    <td>7369</td>
+                    <td>SMITH</td>
+                    <td>20</td>
+                    <td>RESEARCH</td>
+                    <TD>DALLAS</TD>
+                </tr>
+                <tr>
+                    <td>7499</td>
+                    <td>ALLEN</td>
+                    <td>30</td>
+                    <td>SALES</td>
+                    <TD>CHICAGO</TD>
+                </tr>
+                <tr>
+                    <td>7521</td>
+                    <td>WARD</td>
+                    <td>30</td>
+                    <td>SALES</td>
+                    <TD>CHICAGO</TD>
+                </tr>
+                <tr>
+                    <td>7566</td>
+                    <td>JONES</td>
+                    <td>20</td>
+                    <td>RESEARCH</td>
+                    <TD>DALLAS</TD>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>OPERATIONS</td>
+                    <TD>BOSTON</TD>
+                </tr>
+            </table>
+    
+        </div>
+        
+       </div> 
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>EXPLICIT CURSOR</h1>
+        <P><SPAN>Explicit Cursors</SPAN> are programmer-defined cursors for gaining more control over the context area. An explicit cursor should be defined in the declaration section of the PL/SQL Block. It is created on a SELECT Statement which returns more than one row.
+         <br>
+         Working with an explicit cursor includes the following steps −
+       <br>  
+    1.Declaring the cursor for initializing the memory
+    <br>
+    2.Opening the cursor for allocating the memory
+    <br>
+    3.Fetching the cursor for retrieving the data
+    <br>
+    4.Closing the cursor to release the allocated memory</P>
+    <br><p><span>Declaring an explicit cursor</span>
+    <br>
+    While declaring a cursor, cursor name is given and also defines the structure of the query to be performed within it. The CURSOR statement is used to declare explicit error.
+    <br>
+    <span>SYNTAX</span>
+    <BR>
+    </BR>
+    CURSOR &LT;cursor_name/&gt; IS &LT;SELECT_STATEMENT></p>
+    <p><span>Opening an explicit cursor</span>
+        <br>
+        Opening the cursor allocates the memory for the cursor and makes it ready for fetching the rows returned by the SQL statement into it.
+        <br>
+        <span>SYNTAX</span>
+        <BR>
+        </BR>
+        OPEN &LT;cursor_name/&gt; </p>
+        <p><span>Retrieving an explicit cursor</span>
+            <br>
+            Fetching the cursor involves accessing one row at a time.
+            <br>
+            <span>SYNTAX</span>
+            <BR>
+            </BR>
+            FETCH &LT;cursor_name/&gt; INTO &LT;record_name&gt; </p>
+            <p><span>Closing an explicit cursor</span>
+                <br>
+                Closing the cursor means releasing the allocated memory. 
+                <br>
+                <span>SYNTAX</span>
+                <BR>
+                </BR>
+                FETCH &LT;cursor_name/&gt; INTO &LT;record_name&gt; </p>
+        
+    
+        <span>EXAMPLE</span>
+        <div></div>
+        <BR></BR>
+        <div class="example">
+            
+            <PRE class="ex">
+                DECLARE 
+                c_id customers.id%type; 
+                c_name customers.name%type; 
+                c_addr customers.address%type; 
+                CURSOR c_customers is 
+                   SELECT id, name, address FROM customers; 
+             BEGIN 
+                OPEN c_customers; 
+                LOOP 
+                FETCH c_customers into c_id, c_name, c_addr; 
+                   EXIT WHEN c_customers%notfound; 
+                   dbms_output.put_line(c_id || ' ' || c_name || ' ' || c_addr); 
+                END LOOP; 
+                CLOSE c_customers; 
+             END; 
+    </PRE></div>  
+       </div> 
+</body>
+</html>

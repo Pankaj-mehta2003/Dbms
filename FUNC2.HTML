@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Creating a procedure</h1>
+        <p>You can create a new function with the CREATE FUNCTION statement, which may declare a list of parameters, must return one value and must define the actions to be performed by the standard PL/SQL block .</p>
+        <p> <span>SYNTAX</span></p><BR></BR>
+      <img src="FUNC.png" alt="" class="img">
+    <br>
+    In the syntax:
+    <BR></BR>
+    
+    1.OR REPLACE -This option indicates that if the function exists it will be dropped and replaced with the new version created by the statement
+    <br>
+    2.function_name - Name of the function.
+    <br>
+    3.parameter - Name of a PL/SQL variable whose value is passed to the function or populated by the calling environment. or both, depending on the mode being used.
+    <br>
+    4.mode - IN
+    <BR>OUT
+    <br>INOUT
+    <br>5.data type - Data type of the argument or parameter. It can be any SQL or PL/SQL data type. It can be of %TYPE, %ROWTYPE, or any scalar or composite data type.
+    <br>6.RETURN datatype - Data type of the RETURN value that must be return by the function.
+    <BR></BR>    <span>EXAMPLE</span>
+        <BR></BR>
+        <div class="example">
+            
+            <PRE class="ex">
+    CREATE OR REPLACE FUNCTION F1(X NUMBER, Y NUMBER) 
+    RETURN NUMBER IS
+    NUM NUMBER;
+    BEGIN
+    NUM:=X+Y;
+    RETURN (NUM);
+    END F1;
+    </PRE></div>  
+       </div> 
+</body>
+</html>

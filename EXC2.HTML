@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>PREDEFINED EXCEPTIONS</h1>
+      <P>Predefined exceptions are internally defined by runtime system. Predefined exceptions are raised implicitly whenever PL/SQL program violates an ORACLE rule or exceeds a system-dependent limit. Every Oracle error has a number, but exceptions must be handled by name. So, PL/SQL predefines some common ORACLE errors as exceptions.
+        For example, if you try to divide a number by zero then PL/SQL raises an exception called ZERO_DIVIDE and if SELECT can not find a record then PL/SQL raises exception NO_DATA_FOUND.</P>
+       Some of the pre-defined exceptions are:
+       <br>
+    1.NO_DATA_FOUND:
+    
+    Raised when a SELECT INTO statement returns no rows.
+    2.TOO_MANY_ROWS:
+    
+    Raised when a SELECT INTO statement returns multiple rows.
+    <br>    3.DUP_VAL_ON_INDEX:
+    
+    Raised when a unique constraint or index violation occurs. <br>
+    4.ZERO_DIVIDE:
+    
+    Raised when division by zero occurs. <br>
+    5.INVALID_CURSOR:
+    
+    Raised when a cursor operation is performed on an invalid cursor. <br>
+    6.CURSOR_ALREADY_OPEN:
+    
+    Raised when an attempt is made to open a cursor that is already open. <br>
+    7.VALUE_ERROR:
+    
+    Raised when a conversion error or arithmetic error occurs.
+        <span>EXAMPLE</span>
+        <br>
+        <br>
+        
+        <div class="example">
+           
+         
+           <br>
+           <pre class="ex">
+    DECLARE 
+    c_id customers.id%type := 8; 
+    c_name customerS.Name%type; 
+    c_addr customers.address%type; 
+    BEGIN 
+    SELECT  name, address INTO  c_name, c_addr 
+    FROM customers 
+    WHERE id = c_id;  
+    DBMS_OUTPUT.PUT_LINE ('Name: '||  c_name); 
+    DBMS_OUTPUT.PUT_LINE ('Address: ' || c_addr); 
+         
+    EXCEPTION 
+    WHEN no_data_found THEN 
+    dbms_output.put_line('No such customer!'); 
+    END; 
+           </pre>
+        </div>
+       
+       </div> 
+</body>
+</html>

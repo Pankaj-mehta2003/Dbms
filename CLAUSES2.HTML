@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>ORDER BY CLAUSE</h1>
+        <p>The <SPAN>ORDER BY</SPAN> clause is used to sort the result-set in ascending or descending order.
+    <p><span>SYNTAX</span>:
+        
+        <pre>
+    SELECT column1, column2, ...
+    FROM table_name
+    ORDER BY column1, column2, ... ASC|DESC;
+        </pre> 
+            </p>
+        <span>EXAMPLE</span>
+        <br>
+        <br>
+        
+        <div class="example">
+    Consider a table 'EMPLOYEE' with following values:
+    <BR></BR>
+    <table class="table" BORDER="2PX">
+        <tr>
+            <th>EMP_ID</th>
+            <th>NAME</th>
+            <th>SALARY</th>
+            <th>DEPT</th>
+    
+            
+        </tr>
+        <TR>
+            <TD>1</TD>
+            <TD>MONA</TD>
+            <TD>200000</TD>
+            <TD>HR</TD>
+            
+        </TR>
+        <TR>
+            <TD>2</TD>
+            <TD>SONA</TD>
+            <TD>100000</TD>
+            <TD>SALES</TD>
+            
+        </TR>
+        <TR>
+            <TD>3</TD>
+            <TD>NAINA</TD>
+            <TD>50000</TD>
+            <TD>SALES</TD>
+            
+        </TR>
+        <TR>
+            <TD>4</TD>
+            <TD>NAMAN</TD>
+            <TD>150000</TD>
+            <TD>PRODUCTION</TD>
+            
+        </TR>
+        </table> 
+        <BR></BR>
+    TO Sort the table from highest to lowest salary:
+           <pre class="ex">
+    SELECT * FROM EMPLOYEE ORDER BY SALARY DESC ;      </pre>
+           <BR></BR>
+           <table class="table" BORDER="2PX">
+            <tr>
+                <th>EMP_ID</th>
+                <th>NAME</th>
+                <th>SALARY</th>
+                <th>DEPT</th>
+        
+                
+            </tr>
+            <TR>
+                <TD>1</TD>
+                <TD>MONA</TD>
+                <TD>200000</TD>
+                <TD>HR</TD>
+                
+            </TR>
+            <TR>
+                <TD>4</TD>
+                <TD>NAMAN</TD>
+                <TD>150000</TD>
+                <TD>PRODUCTION</TD>
+                
+            </TR>
+            <TR>
+                <TD>2</TD>
+                <TD>SONA</TD>
+                <TD>100000</TD>
+                <TD>SALES</TD>
+                
+            </TR>
+           
+            <TR>
+                <TD>3</TD>
+                <TD>NAINA</TD>
+                <TD>50000</TD>
+                <TD>SALES</TD>
+                
+            </TR>
+           
+            </table>  
+        </div>
+        <BR></BR>
+       
+       </div> 
+</body>
+</html>

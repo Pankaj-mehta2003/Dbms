@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>ALTER COMMAND</h1>
+        <p><span>ALTER</span> : The alter table command is used to modify the definition(structure) of the table by modifying the definition of its columns.</p>
+       
+        <h2>1. ADDING TABLE COLUMNS</h2>
+        <p><span>SYNTAX</span>:
+            <br><pre>
+ALTER TABLE table_name ADD column_name datatype;
+              </pre></p>
+        <p><span>EXAMPLE:</span></p>
+       
+        
+        <div class="example">Consider a table STUDENT with following columns:
+            <br>
+            <br>
+            <table class="table" BORDER="2PX">
+                <tr>
+                    <th>COLUMN NAME</th>
+                    <th>DATATYPE</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+                <TR>
+                    <TD>Name</TD>
+                    <TD>varchar</TD>
+                    <TD>Name of the student</TD>
+                </TR>
+                <TR>
+                    <TD>Roll no.</TD>
+                    <TD>int</TD>
+                    <TD>Roll no. of the student</TD>
+                </TR>
+            </table>
+            The following SQL adds the "class" column in the "student" table:
+            <PRE class="ex">
+ALTER table STUDENT ADD class varchar(5);
+            </PRE></div>
+            <BR></BR>
+          <H2>2. Dropping table columns</H2>  
+            <p><span>SYNTAX</span>:
+                <br>
+                <pre>ALTER TABLE table_name DROP column_name;
+                   </pre></p>
+            <p><span>EXAMPLE:</span></p>
+           
+            <div class="example">
+                Now in the previous table we will delete the column class.
+                <br>
+                The following SQL drops the "class" column in the "student" table:
+                <PRE class="ex">
+ALTER table STUDENT DROP class;
+                </PRE></div>
+                <BR></BR>
+          <H2>3. Modifying table columns</H2>    
+        
+            <p><span>SYNTAX</span>:
+                <br>
+ <pre>
+ALTER TABLE table_name MODIFY column_name datatype;
+                  </pre></p>
+            <p><span>EXAMPLE:</span></p>
+           
+            <div class="example">
+                Now in the previous table we will change the datatype of column roll_no.
+                <br>
+                The following SQL will change datatype of the "roll_no" column in the "student" table:
+                <PRE class="ex">
+ALTER table STUDENT_info MODIFY roll_no tinyint;
+                </PRE>
+            
+       </div> 
+</body>
+</html>

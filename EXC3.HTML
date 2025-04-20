@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>USERDEFINED EXCEPTIONS</h1>
+      <P>In addition to the predefined exceptions, you can also define your own exceptions.
+        Unlike predefined exceptions, user-defined exceptions are declared and defined by the user.
+        User-defined exceptions are declared in the declaration section of PL./SQL block with their type as EXCEPTION. They must be raised explicitly using the RAISE statement, unlike predefined exceptions that are raised implicitly.
+    <BR></BR>
+    <H2>Steps to be followed to use User-defined Exceptions:</H2>
+    (i) They should be explicitly declared in the Declaration section.
+    (Declaring an Exception)
+    <BR></BR>
+    (i) They should be explicitly raised in the Execution section.
+    (Raising an Exception)
+    <BR></BR>
+    (iii) They should be handled by referencing the user-defined exception name in the
+    Exception section.</P>
+        <span>EXAMPLE</span>
+        <br>
+        <br>
+        
+        <div class="example">
+           
+         
+           <br>
+           <pre class="ex">
+    DECLARE
+    v_current_salary NUMBER := 5000;
+    v_new_salary NUMBER := 4000;
+    invalid_salary_exception EXCEPTION;
+    BEGIN
+    IF v_new_salary &LT; v_current_salary THEN
+                RAISE invalid_salary_exception;
+            ELSE
+                v_current_salary := v_new_salary;
+                DBMS_OUTPUT.PUT_LINE('Salary updated successfully.');
+            END IF;
+    EXCEPTION
+            WHEN invalid_salary_exception THEN
+                DBMS_OUTPUT.PUT_LINE('Error: New salary cannot be less than current salary.');
+        END;
+           </pre>
+        </div>
+       
+       </div> 
+</body>
+</html>

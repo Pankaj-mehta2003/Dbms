@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>HAVING CLAUSE</h1>
+        <p><SPAN>HAVING</SPAN> clause is used to filter data based on the group functions. It is used to specify which groups are to be displayed, that is, restrict the groups that you return on the basis of group functions. Simply, conditional retrieval of rows from a grouped result is possible with the HAVING clause.
+            <br>
+            This is similar to WHERE condition but is used with group functions. Group functions cannot be used in WHERE clause but can be used in having clause.
+    <p><span>SYNTAX</span>:
+        
+        <pre>
+    SELECT column_list, group function(column)
+    FROM table_name
+    [WHERE CONDITION]
+    [GROUP BY group_by_expression]
+    [HAVING having_expression]
+    [ORDER BY column];
+        </pre> 
+            </p>
+        <span>EXAMPLE</span>
+        <br>
+        <br>
+        
+        <div class="example">
+            <div class="eg">
+                (if you want to know the total marks held by same age group more than 60,the query would be like:)<br>
+                <br>
+               <PRE class="ex">
+    SELECT AGE,SUM(MARKS) AS TOTAL_MARKS FROM STUDENT<BR>
+    GROUP BY AGE
+    HAVING SUM(MARKS)>60;
+               </PRE> 
+            <BR>
+                <TABLE class="table" BORDER="2PX">
+                    <TH>AGE</TH>
+                    <TH>TOTAL_MARKS</TH>
+                    
+                    <TR>
+                        <TD>21</TD>
+                        <TD>79</TD>
+                    </TR> 
+                    <TR>
+                        <TD>22</TD>
+                        <TD>88</TD>
+                    </TR></div>
+            </body>
+            </html>
+       
+       </div> 
+</body>
+</html>

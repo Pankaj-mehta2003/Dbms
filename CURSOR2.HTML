@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>IMPLICIT CURSOR</h1>
+        <P><SPAN>Implicit Cursors</SPAN> are declared by PL/SQL implicitly when DML statements like, INSERT,UPDATE and DELETE statements are executed. They are also declared when a SELECT Statement that returns just one row is executed. <br> 
+         When the executable part of a PL/SQL block issues a SQL statement, PL/SQL creates an implicit cursor, which PL/SQL manages automatically.
+         <br>
+         <BR></BR>
+         <span>IMPLICIT CURSOR ATTRIBUTES</span><BR></BR>
+         Oracle provides few attributes for implicit cursor called as implicit cursor attributes to check the status of DML operations. <br>
+    
+    These attributes are:
+    <br>
+    1. <span>%FOUND</span>:The return value is TRUE, if the DML statements like INSERT, DELETE and UPDATE affect at least one row and if SELECT INTO statement return at least one row. The return value is FALSE, if DML statements like INSERT. DELETE and UPDATE do not affect any row and if SELECT INTO statement does not return a row.
+    
+    
+    <br>
+    2. <span>%NOTFOUND</span>:The return value is TRUE, if DML statements like INSERT, DELETE and UPDATE do not affect any row and if SELECT INTO statement does not retum a row. The return value is FALSE, if the DML statements like INSERT, DELETE and UPDATE affect at least one row and if SELECT INTO statement return at least one row. 
+    <br>
+    3. <span>%ROWCOUNT</span>:Return the number of rows affected by the DML operations INSERT, DELETE UPDATE, or single row SELECT.
+    <br>
+    4. <span>%ISOPEN</span>:The return value is always FALSE because Oracle automatically closes an Implicit cursor after executing its SQL statement.
+    <br>
+    When we execute INSERT, UPDATE or DELETE statements the cursor attributes tell us whether any rows are affected and how many have been affected. When a SELECT.... INTO statement is executed in a PL/SQL, Block, implicit cursor attributes can be used to find out whether any row has been returned by the SELECT statement. PL/SQL returns an et when no data is selected.
+            </P>
+    
+        <span>EXAMPLE</span>
+        <div></div>
+        <BR></BR>
+        <div class="example">
+            
+            <PRE class="ex">
+    DECLARE 
+        VAR_ROWS NUMBER(5);
+    BEGIN
+        UPDATE EMP
+        SET SAL = SAL+ 1000;
+        IF SQL%NOTFOUND THEN
+                DBMS_OUTPUT.PUT_LINE('NONE OF THE SALARIES WERE UPDATED'); 
+        ELSIF SQL%FOUND THEN
+                VAR_ROWS:= SQL%ROWCOUNT;
+                DBMS_OUTPUT.PUT_LINE (VAR_ROWS|| 'RECORDS ARE UPDATED.')
+        END IF;
+        END;
+                
+    On execution above code will return:
+    14 RECORDS ARE UPDATED.
+    </PRE></div>  
+       </div> 
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>INSERTING VALUES INTO A TABLE</h1>
+        <p> The <SPAN>INSERT</SPAN>statement is used to insert new rows or records into a table.Values can be inserted for all the columns or for the selected columns of the table. You can insert data into a table through different ways:
+        </p>
+        <h2>1.INSERTING THE DATA WITHOUT SPECIFYING COLUMN NAME</h2>
+        <p><span>SYNTAX</span>:
+        
+            <pre>
+    INSERT INTO table_name values(val1,val2,-----valN);
+            </pre></p>
+        <span>EXAMPLE</span>
+        <br>
+        <br>
+        <div class="example">Consider a table <span>STUDENT</span> which has following columns:
+            <br>
+            <br>
+            <table class="table">
+                <tr>
+                    <th>COLUMN NAME</th>
+                    <th>DATATYPE</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+                <TR>
+                    <TD>Name</TD>
+                    <TD>varchar</TD>
+                    <TD>Name of the student</TD>
+                </TR>
+                <TR>
+                    <TD>Roll no.</TD>
+                    <TD>int</TD>
+                    <TD>Roll no. of the student</TD>
+                </TR>
+            </table>
+            The following SQL statement inserts value into table "STUDENT":
+            <PRE class="ex">
+    INSERT INTO STU VALUES('MONA',1);        </pre>
+    Now to view the content of table execute following command:
+    <pre class="ex">select * from STUDENT;   </pre>
+    
+    
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Roll_no</th>
+            
+        </tr>
+        <TR>
+            <TD>MONA</TD>
+            <TD>1</TD>
+            
+        </TR>
+    </table>
+          </div> 
+          <br>
+    <h2>2.INSERTING THE DATA BY SPECIFYING COLUMN NAMES</h2>
+    <p><span>SYNTAX</span>:
+    
+        <pre>
+    INSERT INTO table_name [col1,col2----colN] values(val1,val2,-----valN);
+        </pre></p>
+    <span>EXAMPLE</span>
+    <br>
+    <br>
+    <div class="example">
+        The following SQL statement inserts value into table "STUDENT":
+        <PRE class="ex">
+    INSERT INTO STU (Name) VALUES('SONA');        </pre>
+    
+    <pre class="ex">select * from STUDENT;   </pre>
+    
+    
+    <table class="table" BORDER="2REM">
+    <tr>
+        <th>Name</th>
+        <th>Roll_nO</th>
+        
+    </tr>
+    <TR>
+        <TD>MONA</TD>
+        <TD>1</TD>
+        
+    </TR>
+    <TR>
+        <TD> SONA</TD>
+        <TD>NULL</TD>
+        
+    </TR>
+    </table>
+       
+        
+       </div> 
+</body>
+</html>

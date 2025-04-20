@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Creating a procedure</h1>
+        <p>You can create a new procedure with the CREATE PROCEDURE statement, which may declare a list of parameters and must define the actions to be performed by the standard PL/SQL block The CREATE clause enables you to create stand-alone procedures, which are stored in an Oracle database</p>
+        <p> <span>SYNTAX</span></p><BR></BR>
+      <img src="PROCEDURE_SYNTAX.JPEG" alt="" class="img">
+    <br>
+    In the syntax:
+    <BR></BR>
+    
+    OR REPLACE -This option indicates that if the procedure exists it will be dropped and replaced with the new version created by the statement
+    <br>
+    procedure_name - Name of the procedure
+    <br>
+    parameter - Name of a PL/SQL variable whose value is passed to the procedure or populated by the calling environment. or both, depending on the mode being used
+    <br>
+    mode - IN
+    <BR>OUT
+    <br>INOUT
+    <BR></BR>    <span>EXAMPLE</span>
+        <BR></BR>
+        <div class="example">
+            
+            <PRE class="ex">
+    CREATE OR REPLACE PROCEDURE P1(X NUMBER, Y NUMBER) IS
+    NUM NUMBER;
+    BEGIN
+    NUM:=X+Y;
+    DBMS_OUTPUT.PUT_LINE(NUM);
+    END P1;
+    </PRE></div>  
+       </div> 
+</body>
+</html>

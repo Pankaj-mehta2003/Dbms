@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>COUNT()</h1>
+        <p>This function returns the number of rows in the table that satisfies the condition specified in the WHERE clause. If the WHERE clause is not specified, then the query returns the total number of rows in the table.
+            </p>
+    <BR></BR>    <span>EXAMPLE</span>
+        <BR></BR>
+        <div class="example">
+    Consider below "Student" table for understanding the functioning of the Count() function.
+    <table class="table" BORDER="2PX">
+        <tr>
+            <th>Name</th>
+            <th>Roll_nO</th>
+            <th>MARKS</th>
+            
+        </tr>
+        <TR>
+            <TD>MONA</TD>
+            <TD>1</TD>
+            <TD>100</TD>
+            
+        </TR>
+        <TR>
+            <TD> SONA</TD>
+            <TD>2</TD>
+            <TD>90</TD>
+            
+        </TR>
+        <TR>
+            <TD> NAINA</TD>
+            <TD>3</TD>
+            <TD>80</TD>
+            
+        </TR>
+        <TR>
+            <TD>KAIRA</TD>
+            <TD>4</TD>
+            <TD>90</TD>
+            
+        </TR>
+        </table>
+    If you want to count total no. of students in the student table.    
+            
+            <PRE class="ex">
+    select count(*) AS TOTAL_STUDENTS FROM STUDENT;
+    OUTPUT:
+    <BR><TABLE class="table" BORDER="2PX">
+        <tr><th>TOTAL_STUDENTS</th></tr>
+        <tr><td>4</td></tr>
+        
+    </TABLE>
+    </PRE></div>  
+       </div> 
+</body>
+</html>
